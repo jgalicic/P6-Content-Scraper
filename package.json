@@ -1,0 +1,18 @@
+{
+  "name": "p6-content-scraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scraper.js",
+  "scripts": {
+    "start": "node scraper.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Justin Galicic",
+  "license": "ISC",
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "fast-csv": "^2.4.1",
+    "jQuery": "^1.7.4",
+    "request": "^2.83.0"
+  }
+}
