@@ -96,7 +96,9 @@ function scrapeSite() {
       // Use setTimeout() to ensure all data has been loaded into scrapeArray before writing to the .csv file
 
       setTimeout(function(){
+
         csv.write(scrapeArray, {headers:true}).pipe(ws);
+
       },2000);
 
     } else {
@@ -112,7 +114,6 @@ function scrapeSite() {
 
 } // end scrapeSite
 
-
 // Scrape info from each product page function
 
 function getShirtInfo(shirtURL) {
@@ -126,12 +127,10 @@ function getShirtInfo(shirtURL) {
         const $$ = cheerio.load(body);
 
         // Get title
-        //OLD: $$('.shirt-details h1').contents().not($$('.price')).each(function(){
-          $$('#content').each(function(){
+
+        $$('#content').each(function(){
 
           scrapeArray[i] = [];
-
-          // scrapeArray[i].push($$(this).text());
 
           // Push shirt title to scrapeArray
 
